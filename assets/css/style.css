@@ -1,0 +1,468 @@
+@font-face {
+    font-family: "montserrat";
+    src: url(../font/montserrat/Montserrat-Bold.ttf);
+}
+* {
+    font-family: "montserrat";
+    margin: 0;
+    padding: 0;
+}
+
+/*Barre avec logo et le menu burger*/
+#menuHeader{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: black;
+    font-size: 3rem;
+}
+
+ /*habillage de la liste pour le menu burger*/
+#menuHeader ul {
+    width: 100%;
+    position: absolute;
+    top: 36px;
+    left: -102%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all 0.5s;
+    padding-top: 2.3rem;
+}
+#menuHeader li{
+    font-size: 1rem;
+    z-index: 1;
+    color: gray;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding-top: 0.3rem;
+}
+
+#brand, #burger{
+    padding: 0.5rem;
+}
+
+#box{
+    display: none;
+}
+
+#box:checked~ul{
+    /*max-width: 500px;*/
+    display: flex;
+    /*background-color: blue;*/
+    left: 0;
+}
+
+#box:not(:checked)~ul{
+    display: none;
+    /*max-height: 0;*/
+}
+
+/*2eme nav*/
+#menuHeader2{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    color: gray;
+    background-color: white;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+/*Image de fond*/
+
+#imgHeader{
+    justify-content: center;
+    background-image: url(../img/jeans.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    height: 40vh;
+    width: 90%;
+    margin-left: 0.5rem;
+    padding-left: 2rem;
+    padding-top: 3rem;
+    
+}
+
+#imgHeader h2, #imgHeader h3, #imgHeader h4{
+    margin-bottom: 2rem;
+}
+
+/*texte new arrivals*/
+#imgHeader h2{
+    padding-top: 1.5rem;
+    letter-spacing: 0.2rem;
+    font-size: 2.8rem;
+}
+
+/*texte collection*/
+#imgHeader h3{
+    font-size: 1.4rem;
+    padding-bottom: 1rem;
+}
+
+#imgHeader div{
+    width: auto;
+}
+/*texte shop now*/
+#imgHeader #pw{
+    background-color: black;
+    color: white;
+    text-align: left;
+    width: fit-content;
+    padding: 1rem;
+
+}
+
+/*section items*/
+
+#titre{
+    padding: 1rem;
+    color: lightgray;
+}
+
+#shop{ /*c'est pour la position de l'image*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 0.5rem;
+}
+
+#shop .imgJean{ /*taille des images*/
+    width: 49%;
+}
+
+.imgJean img { /*taille img*/
+    width: 100%;
+}
+
+.imgJean h3{ /*titre*/
+    width: 80%;
+    padding-top: 0.5rem;
+    color: rgb(155, 153, 153);
+}
+
+#mega{
+    width: 75%;
+}
+
+.imgJean h4{
+    padding-top: 0.3rem;
+}
+
+.imgJean{
+    padding-bottom: 1rem;
+    position: relative;
+}
+
+/*prix*/
+
+#price{
+    color: rgb(248, 113, 113);
+}
+
+/*etiquette new et sale*/
+
+.etiquette{
+    background-color: black;
+    color: white;
+    width: fit-content;
+    padding-top: 0.2rem;
+    padding-right: 0.5rem;
+    padding-left: 0.2rem;
+    position: absolute;
+    top: 0;
+}
+
+#items{
+    padding-bottom: 1rem;
+}
+
+/*section Subscribe*/
+
+#subscribe{
+    background-color: black;
+    width: 97%;
+    margin-left: 0.5rem;
+    padding-bottom: 2rem;
+}
+
+#texte{ /*ce à quoi ressemble le fond de la section*/
+    color: white;
+    padding-left: 1rem;
+    padding-top: 2rem;
+}
+
+#subscribe h3, #subscribe p{ /*espacement entre le h3 et le p*/
+    padding-bottom: 1rem;
+}
+
+#subscribe input{ /*changer l'intérieur du champs de lemail*/
+    width: 90%;
+    padding: 1rem;
+}
+
+#txtemail{ /*espacer le bouton et le champs de lemail*/
+    padding-bottom: 0.5rem;
+}
+
+#subscribe button{
+    background-color: red;
+    color: white;
+    padding: 1rem;
+}
+
+/*Section Pub*/
+
+#pub{
+    background-color: rgb(196, 196, 196);
+    width: 97%;
+    margin-left: 0.5rem;
+    padding-bottom: 5rem;
+}
+
+#contact h3{
+    color: gray;
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+}
+
+#contact p{
+    color: gray;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+/*taille et emplacement des div*/
+#contact div{
+    width: 80%;
+    margin: auto;
+    padding-bottom: 0.5rem;
+}
+
+#contact input{
+    width: 90%;
+    padding: 0.5rem;
+}
+
+/*taille du bouton*/
+
+#contact button{
+    width: 95%;
+    background-color: black;
+    color: white;
+    padding: 0.5rem;
+}
+
+#contact{
+    padding-bottom: 2rem;
+}
+
+/*partie about*/
+
+#separe{
+    display: flex;
+    justify-content: space-around;
+}
+
+#about h3{
+    color: rgb(80, 80, 80);
+    padding: 1rem;
+    text-align: center;
+}
+
+#about a{
+    padding: 1rem;
+    text-align: center;
+}
+
+#encolone{
+    display: flex;
+    flex-direction: column;
+}
+
+#store h3{
+    color: rgb(80, 80, 80);
+    padding: 1rem;
+}
+
+#store{
+    color: gray;
+    text-align: center;
+}
+
+#store p{
+    padding: 0.5rem;
+}
+#rs{
+    padding-top: 1rem;
+}
+
+/*section fin*/
+
+#end{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    width: 100%;
+}
+
+@media screen and (min-width: 576px) {
+    /*section contact*/
+    #contact h3, #contact p{
+        color: black;
+    }
+
+    #contact{
+        width: 50%;
+        padding-bottom: 0;
+    }
+    
+    #contact h3{
+        padding-top: 5rem;
+    }
+
+    #pub{
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 2rem;
+    }
+
+    #separe{
+        width: 50%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #about, #store{
+        width: 100%;
+    }
+
+    #about h3{
+        color: black;
+        padding: 1rem;
+        padding-bottom: 2rem;
+        text-align: center;
+    }
+    
+    #about a{
+        padding: 0;
+        padding-bottom: 0.5rem;
+        text-align: center;
+    }
+
+    #about{
+        padding-bottom: 2rem;
+    }
+    
+    #encolone{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #store h3{
+        color:black;
+        padding: 1rem;
+    }
+    
+    #store{
+        color: black;
+        text-align: center;
+    }
+    
+    #store h3:first-child{
+        padding-top: 5rem;
+    }
+
+    #store p{
+        padding: 0.5rem;
+    }
+    #rs{
+        padding-top: 1rem;
+    }
+    /*section items */
+
+    #store{
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+    #shop .imgJean{
+        width: 24%;
+    }
+    /*section header*/
+    #imgHeader{
+        width: 95%;
+    }
+
+    /*secteur logo*/
+
+    #menuHeader{
+        display: flex;
+        background-color: white;
+        color: black;
+        position: absolute;
+        z-index: 0;
+    }
+
+    #menuHeader2{
+        margin-left: 20%;
+    }
+
+    #menuHeader i{
+        display: none;
+    }
+    #menuHeader ul{
+        background-color: white;
+        text-align: center;
+        margin-top: 30%;
+        margin-left: 20%;
+    }
+    
+    #imgHeader{
+        margin-left: 20%;
+    }
+
+    #titre{
+        margin-left: 20%;
+    }
+
+    #items{
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    #subscribe{
+        margin-left: 20%;
+    }
+    
+    #pub{
+        margin-left: 20%;
+    }
+    
+    #brand{
+        z-index: 1;
+        font-size: 80%;
+        margin-left: 20%;
+    }
+
+    #shoes{
+        padding-bottom: 3rem;
+    }
+    
+    .nl{
+        padding-bottom: 0.3rem;
+    }
+
+    #box:not(:checked)~ul{
+        display: flex;
+        /*max-height: 0;*/
+      }
+}
